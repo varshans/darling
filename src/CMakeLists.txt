@@ -224,7 +224,7 @@ include_directories(AFTER
 	${CMAKE_CURRENT_SOURCE_DIR}/AddressBook/include
 	${CMAKE_CURRENT_SOURCE_DIR}/EventKit/include
 	${CMAKE_CURRENT_SOURCE_DIR}/ApplicationServices/HIServices/include
-	${CMAKE_CURRENT_SOURCE_DIR}/ApplicationServices/ATS/include	
+	${CMAKE_CURRENT_SOURCE_DIR}/ApplicationServices/ATS/include
 	${CMAKE_CURRENT_SOURCE_DIR}/ApplicationServices/QD/include
 	${CMAKE_CURRENT_SOURCE_DIR}/ApplicationServices/ColorSyncLegacy/include
 	${CMAKE_CURRENT_SOURCE_DIR}/ApplicationServices/LangAnalysis/include
@@ -246,6 +246,9 @@ include_directories(AFTER
 	${CMAKE_CURRENT_SOURCE_DIR}/OpenCL/include
 	${CMAKE_CURRENT_SOURCE_DIR}/OpenDirectory/include
 	${CMAKE_CURRENT_SOURCE_DIR}/MetalKit/include
+	${CMAKE_CURRENT_SOURCE_DIR}/CoreLocation/include
+	${CMAKE_CURRENT_SOURCE_DIR}/frameworks/include
+	${CMAKE_CURRENT_SOURCE_DIR}/private-frameworks/include
 )
 
 add_subdirectory(external/libkqueue)
@@ -331,6 +334,7 @@ add_subdirectory(ConfigurationProfiles)
 add_subdirectory(AppleSystemInfo)
 add_subdirectory(DiskImages)
 add_subdirectory(PackageKit)
+add_subdirectory(external/OpenDirectory)
 
 add_subdirectory(native)
 
@@ -440,7 +444,10 @@ add_subdirectory(CoreMIDI)
 add_subdirectory(libsandbox)
 add_subdirectory(OpenCL)
 add_subdirectory(OpenDirectory)
+add_subdirectory(opendirectory)
 add_subdirectory(MetalKit)
+
+add_subdirectory(clt)
 
 # Just a stub
 add_subdirectory(WebKit)
@@ -451,10 +458,13 @@ add_subdirectory(DirectoryServices)
 add_subdirectory(DrawSprocket)
 add_subdirectory(AddressBook)
 add_subdirectory(EventKit)
-
 add_subdirectory(ApplicationServices)
 add_subdirectory(external/cocotron/CoreGraphics)
 add_subdirectory(ColorSync)
+add_subdirectory(CoreLocation)
+
+add_subdirectory(frameworks)
+add_subdirectory(private-frameworks)
 
 # /Applications
 #add_subdirectory(external/TextEdit)
